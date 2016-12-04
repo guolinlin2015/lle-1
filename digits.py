@@ -74,23 +74,18 @@ plot_embedding(X_mds,"MDS embedding of the digits ")
 
 #----------------------------------------------------------------------
 # Isomap projection of the digits dataset
-
-
-
-
-
+print("Computing Isomap embedding")
+X_iso = manifold.Isomap(n_neighbors, n_components=2).fit_transform(X)
+plot_embedding(X_iso, "Isomap projection of the digits ")
 
 
 
 #----------------------------------------------------------------------
 # Locally linear embedding of the digits dataset
-
-
-
-
-
-
-
+print("Computing LLE embedding")
+clf = manifold.LocallyLinearEmbedding(n_neighbors, n_components=2,method='standard')
+X_lle = clf.fit_transform(X)
+plot_embedding(X_lle, "Locally Linear Embedding of the digits ")
 
 
 

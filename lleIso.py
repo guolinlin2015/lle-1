@@ -37,9 +37,22 @@ ax.scatter(x, y, z, c=p[indices], cmap=plt.cm.rainbow)
 sphere_data = np.array([x, y, z]).T
 
 # Perform Locally Linear Embedding Manifold learning
+trans_data = manifold.LocallyLinearEmbedding(n_neighbors, 2, method='standard').fit_transform(sphere_data).T
+ax = fig.add_subplot(252 )
+plt.scatter(trans_data[0], trans_data[1], c=colors, cmap=plt.cm.rainbow)
+plt.title("lle" )
+
+plt.axis('tight')
 
 
 # Perform Isomap Manifold learning.
+
+trans_data = manifold.Isomap(n_neighbors, n_components=2).fit_transform(sphere_data).T
+ax = fig.add_subplot(257)
+plt.scatter(trans_data[0], trans_data[1], c=colors, cmap=plt.cm.rainbow)
+plt.title("Isomap")
+
+plt.axis('tight')
 
 
 
