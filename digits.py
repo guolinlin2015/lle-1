@@ -77,7 +77,7 @@ plot_embedding(X_mds,"MDS embedding of the digits ")
 
 
 
-
+### YOUR CODE HERE
 
 
 
@@ -86,7 +86,7 @@ plot_embedding(X_mds,"MDS embedding of the digits ")
 # Locally linear embedding of the digits dataset
 
 
-
+### YOUR CODE HERE
 
 
 

@@ -38,9 +38,11 @@ sphere_data = np.array([x, y, z]).T
 
 # Perform Locally Linear Embedding Manifold learning
 
+### YOUR CODE HERE
 
 # Perform Isomap Manifold learning.
 
+### YOUR CODE HERE
 
 
 plt.show()
